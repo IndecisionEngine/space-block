@@ -1,0 +1,14 @@
+{
+	"name": "space-block",
+	"version": "0.1.0",
+	"title": "Space Block",
+	"author": "You",
+	"factorio_version": "2.1",
+	"dependencies": [
+		"base >= 2.1",
+		"space-age >= 2.1",
+		"quality >= 2.1"
+	],
+	"description": "Become lost in space.",
+	"space_travel_required": true
+}
