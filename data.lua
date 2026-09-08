@@ -1,3 +1,4 @@
+require("prototypes/categories/categories")
 require("prototypes/items/items")
 require("prototypes/fluids/fluids")
 require("prototypes/entity/entity")

@@ -7,7 +7,7 @@
 	"dependencies": [
 		"base >= 2.1",
 		"space-age >= 2.1",
-		"quality >= 2.1"
+		"? quality >= 2.1"
 	],
 	"description": "Become lost in space.",
 	"space_travel_required": true

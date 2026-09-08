@@ -5,5 +5,9 @@
         "undefined-field",
         "missing-fields",
         "assign-type-mismatch"
-    ]
+    ],
+    "Lua.workspace.userThirdParty": [
+        "c:\\Users\\Virsa\\AppData\\Roaming\\Code\\User\\workspaceStorage\\0b8119cbaec68a190e2d3267c718970a\\justarandomgeek.factoriomod-debug\\sumneko-3rd"
+    ],
+    "Lua.workspace.checkThirdParty": "ApplyInMemory"
 }

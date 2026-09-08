@@ -45,15 +45,17 @@ script.on_event(defines.events.on_player_created, function(event)
 
     if platform then
         storage.hub = platform.apply_starter_pack()
-        storage.hub.insert({ name = "crusher", count = 1 })
-        storage.hub.insert({ name = "asteroid-collector", count = 1 })
+        storage.hub.insert({ name = "crusher", count = 10 })
+        storage.hub.insert({ name = "asteroid-collector", count = 10 })
         storage.hub.insert({ name = "solar-panel", count = 3 })
         storage.hub.insert({ name = "inserter", count = 5})
         storage.hub.insert({ name = "iron-plate", count = 25})
         storage.hub.insert({ name = "electronic-circuit", count = 15})
-        storage.hub.insert({ name = "space-platform-foundation", count = 150})
+        storage.hub.insert({ name = "space-platform-foundation", count = 350})
         storage.hub.insert({ name = "basic-electronic-furnace", count = 10})
         storage.hub.insert({ name = "chemical-plant", count = 10})
+        storage.hub.insert({ name = "atmospheric-boiler", count = 10})
+        storage.hub.insert({ name = "steam-engine", count = 10})
     end
 end)
 
