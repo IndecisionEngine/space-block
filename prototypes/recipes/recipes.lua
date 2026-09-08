@@ -44,7 +44,7 @@ data:extend{
             {type="fluid", name="o2", amount=10}
         },
         results={
-            {type="item", name="oxygen-rich-carbon", amount=1},
+            {type="item", name="oxygen-rich-carbon", amount=2},
         },
         allow_productivity=true,
         icon="__space-age__/graphics/icons/carbon.png",
@@ -64,6 +64,34 @@ data:extend{
         },
         results={
             {type="item", name="atmospheric-boiler", amount=1}
+        }
+    },
+    {
+        type="recipe",
+        name="hydrogen-venting",
+        categories={"chemistry"},
+        enabled=true,
+        energy_required=1,
+        ingredients={
+            {type="fluid", name="h2", amount=10}
+        },
+        icon="__base__/graphics/icons/fluid/steam.png",
+        -- subgroup="fluid-recipes",
+        allow_decomposition=false
+    },
+    {
+        type = "recipe",
+        name = "hydrogen-accumulator",
+        categories = {"chemistry"},
+        enabled = true,
+        energy_required = 10,
+        ingredients = {
+            {type="item", name="iron-plate", amount=5},
+            {type="item", name="copper-plate", amount=2},
+            {type="fluid", name="h2", amount=50},
+        },
+        results = {
+            {type="item", name="hydrogen-accumulator", amount=1}
         }
     }
 }

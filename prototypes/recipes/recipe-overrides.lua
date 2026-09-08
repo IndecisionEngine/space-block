@@ -42,6 +42,11 @@ local recipe_mods ={
             {type="item", name="stone",                amount=5},
             {type="item", name="oxide-asteroid-chunk", amount=1, independent_probability=0.45, ignored_by_stats=1}
         }
+    },
+    ["storage-tank"]                    = {
+        ingredients = {
+            {type="item", name="iron-plate", amount=25}
+        }
     }
 }
 

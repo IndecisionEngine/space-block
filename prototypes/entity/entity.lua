@@ -474,3 +474,10 @@ data:extend{
 
 
 }
+
+local new_accumulator = table.deepcopy(data.raw["accumulator"].accumulator)
+new_accumulator.name = "hydrogen-accumulator"
+new_accumulator.energy_source.buffer_capacity = "3MJ"
+new_accumulator.energy_source.input_flow_limit = "200kW"
+new_accumulator.minable.result = "hydrogen-accumulator"
+data:extend{new_accumulator}

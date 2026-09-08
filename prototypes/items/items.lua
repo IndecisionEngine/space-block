@@ -38,6 +38,14 @@ data:extend {
         place_result = "atmospheric-boiler",
         stack_size = 50,
         -- random_tint_color = item_tints.iron_rust
+    },
+    {
+        type = "item",
+        name = "hydrogen-accumulator",
+        icon = "__base__/graphics/icons/accumulator.png",
+        subgroup = "energy",
+        place_result = "hydrogen-accumulator",
+        stack_size = 50
     }
 
 
