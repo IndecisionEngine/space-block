@@ -47,7 +47,12 @@ data:extend{
             {type="item", name="oxygen-rich-carbon", amount=2},
         },
         allow_productivity=true,
-        icon="__space-age__/graphics/icons/carbon.png",
+        icons={ 
+            {
+                icon="__space-age__/graphics/icons/carbon.png",
+                tint={r=0.75,g=0.75,b=1.0,a=1}
+            }
+        },
         -- subgroup="fluid-recipes",
         allow_decomposition=false
     },

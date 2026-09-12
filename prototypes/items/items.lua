@@ -19,7 +19,12 @@ data:extend {
     {
         type="item",
         name="oxygen-rich-carbon",
-        icon="__space-age__/graphics/icons/carbon.png",
+        icons={ 
+            {
+                icon="__space-age__/graphics/icons/carbon.png",
+                tint={r=0.75,g=0.75,b=1.0,a=1}
+            }
+        },
         fuel_value="12MJ",
         fuel_category="oxygen-rich",
         subgroup="raw-material",
