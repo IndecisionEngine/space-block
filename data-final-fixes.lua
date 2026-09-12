@@ -15,7 +15,9 @@ local starting_recipes={
     "storage-tank",
     "inserter",
     "space-platform-foundation",
-    "simple-coal-liquefaction"
+    "simple-coal-liquefaction",
+    "medium-electric-pole",
+    "power-switch"
 }
 for _, recipename in pairs(starting_recipes) do
     if data.raw.recipe[recipename] then
@@ -34,10 +36,10 @@ data.raw["assembling-machine"]["oil-refinery"].surface_conditions={
 if data.raw["planet"] and data.raw["planet"].nauvis then
     local asteroid_util = require("__space-age__.prototypes.planet.asteroid-spawn-definitions")
     local ratio = asteroid_util.nauvis_ratio
-    ratio[1],ratio[2],ratio[3],ratio[4] = 2, 2, 2, 0
+    ratio[1],ratio[2],ratio[3],ratio[4] = 3, 2, 2, 0
 
     data.raw["planet"].nauvis.asteroid_spawn_definitions = asteroid_util.spawn_definitions(asteroid_util.nauvis_vulcanus, 0.1)
 end
 
-
+data.raw["space-platform-starter-pack"]["space-platform-starter-pack"].create_electric_network = false
 
