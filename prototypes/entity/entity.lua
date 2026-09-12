@@ -10,7 +10,7 @@ data:extend{
         minable = {mining_time=0.2, result="basic-electronic-furnace"},
         max_health=175,
         corpse="electric-furnace-remnants",
-        collision_box = { {-0.9,-0.9},{0.9,0.9} },
+        collision_box = { {-0.8,-0.8},{0.8,0.8} },
         selection_box = { {-1,-1}, {1, 1} },
         surface_conditions=
         {
@@ -166,7 +166,7 @@ data:extend{
         name = "atmospheric-boiler",
         icon = "__base__/graphics/icons/boiler.png",
         flags = {"placeable-neutral", "player-creation"},
-        minable = {mining_time = 0.2, result = "boiler"},
+        minable = {mining_time = 0.2, result = "atmospheric-boiler"},
         fast_replaceable_group = "boiler",
         max_health = 200,
         corpse = "boiler-remnants",
