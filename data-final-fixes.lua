@@ -43,3 +43,21 @@ end
 
 data.raw["space-platform-starter-pack"]["space-platform-starter-pack"].create_electric_network = false
 
+
+data.raw.planet.nauvis.map_gen_settings = {
+    width = 5,
+    height = 5,
+    starting_area = 0,
+    starting_points = {},
+    default_enable_all_autoplace_controls = false,
+    autoplace_controls = {},
+    autoplace_settings = nil,
+    cliff_settings = nil,
+    peaceful_mode = true,
+    property_expression_names = {
+        ["elevation"] = 1,
+        ["enemy-base-intensity"] = 0,
+        ["enemy-base-frequency"] = 0,
+        ["enemy-base-radius"] = 0,
+  },
+}

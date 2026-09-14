@@ -8,6 +8,7 @@ script.on_init(function()
         remote.call("freeplay","set_skip_intro",true)
         remote.call("freeplay","set_disable_crashsite",true)
     end
+    
 end)
 
 local function return_to_platform(player)
@@ -17,6 +18,9 @@ local function return_to_platform(player)
     if surface_name == "nauvis" or surface_name == "vulcanus" or surface_name == "gleba" or surface_name == "fulgora" or surface_name == "aquilo" then
         local safe_position = { x = storage.hub.position.x, y = storage.hub.position.y - 5 }
         player.teleport(safe_position, storage.hub.surface)
+        
+        game.surfaces[surface_name].clear()
+        player.force.set_surface_hidden(game.surfaces[surface_name], true)
     end
 end
 
@@ -25,12 +29,8 @@ script.on_event(defines.events.on_player_created, function(event)
     local player = game.get_player(event.player_index)
     if not player then return end
 
-    -- if settings.startup["space-block-advanced-mode"].value == false or settings.startup["space-block-space-suit"].value == true then
-    --     player.insert { name = "space-suit", count = 1 }
-    -- end
-
     local force = player.force
-
+    
     -- Unlock space platforms
     if not force.is_space_platforms_unlocked() then
         force.unlock_space_platforms()
@@ -56,6 +56,8 @@ script.on_event(defines.events.on_player_created, function(event)
         storage.hub.insert({ name = "chemical-plant", count = 10})
         storage.hub.insert({ name = "atmospheric-boiler", count = 10})
         storage.hub.insert({ name = "steam-engine", count = 10})
+
+        return_to_platform(player)
     end
 end)
 
