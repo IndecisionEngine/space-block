@@ -28,10 +28,10 @@ data:extend{
             {type="fluid", name="o2", amount=100},
             {type="fluid", name="h2", amount=200},
         },
-        allow_productivity=true,
         icon="__base__/graphics/icons/fluid/steam.png",
         subgroup="fluid-recipes",
-        allow_decomposition=false
+        allow_decomposition=false,
+        allow_productivity=false,
     },
     {
         type="recipe",
@@ -78,11 +78,38 @@ data:extend{
         enabled=true,
         energy_required=1,
         ingredients={
-            {type="fluid", name="h2", amount=10}
+            {type="fluid", name="h2", amount=200}
         },
-        icon="__base__/graphics/icons/fluid/steam.png",
+        icons={
+            {
+                icon = "__base__/graphics/icons/fluid/steam.png",
+                icon_size = 64,
+                tint = {r=0.7,g=0.7,b=0.7,a=1}
+            }
+        },
         -- subgroup="fluid-recipes",
-        allow_decomposition=false
+        allow_decomposition=false,
+        allow_productivity = false,
+    },
+    {
+        type="recipe",
+        name="oxygen-venting",
+        categories={"chemistry"},
+        enabled=true,
+        energy_required=1,
+        ingredients={
+            {type="fluid", name="o2", amount=200}
+        },
+        icons={
+            {
+                icon = "__base__/graphics/icons/fluid/steam.png",
+                icon_size = 64,
+                tint = {r=0.9,g=0.9,b=1,a=1}
+            }
+        },
+        -- subgroup="fluid-recipes",
+        allow_decomposition=false,
+        allow_productivity = false,
     },
     {
         type = "recipe",
@@ -98,5 +125,35 @@ data:extend{
         results = {
             {type="item", name="hydrogen-accumulator", amount=1}
         }
-    }
+    },
+    {
+        type = "recipe",
+        name = "hydrogen-ignition",
+        categories = {"chemistry"},
+        enabled = true,
+        energy_required = 2,
+        ingredients = {
+            {type="fluid", name="h2", amount=50},
+            {type="fluid", name="water", amount=50},
+        },
+        results = {
+            {type="fluid", name="steam", amount=500, temperature=165}
+        },
+        allow_productivity = false,
+    },
+    {
+        type = "recipe",
+        name = "exhaust-steam-condensation",
+        categories = {"chemistry", "cryogenics"},
+        subgroup = "fluid-recipes",
+        enabled = true,
+        energy_required = 1,
+        ingredients = {
+            {type="fluid", name="exhaust-steam", amount=100},
+        },
+        results = {
+            {type="fluid", name="water", amount=10}
+        },
+        allow_productivity = false
+    },
 }

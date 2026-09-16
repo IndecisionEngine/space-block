@@ -61,3 +61,21 @@ data.raw.planet.nauvis.map_gen_settings = {
         ["enemy-base-radius"] = 0,
   },
 }
+
+
+
+
+local engine = data.raw["generator"]["steam-engine"]
+engine.output_fluid_box = {
+    volume = 200,
+    pipe_connections = {
+        { flow_direction = "output", direction = defines.direction.east, position = {1,0}},
+        { flow_direction = "output", direction = defines.direction.west, position = {-1,0}},
+    },
+    production_type = "output",
+    filter = "exhaust-steam",
+}
+engine.spent_fluid = {name = "exhaust-steam"}
+
+
+--Failed to load mods: Error while loading entity prototype "steam-engine" (generator): Value must be a dictionary in property tree at ROOT.generator.steam-engine.spent_fluid

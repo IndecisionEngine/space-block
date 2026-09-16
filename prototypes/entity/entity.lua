@@ -26,7 +26,7 @@ data:extend{
             type="electric",
             usage_priority="secondary-input"
         },
-        energy_usage="215kW",
+        energy_usage="96kW",
         module_slots=0,
         crafting_categories={"smelting"},
         source_inventory_size=1,

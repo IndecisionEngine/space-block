@@ -33,4 +33,20 @@ data:extend{
         },
         gas_temperature=20
     },
+    {
+        type="fluid",
+        name="exhaust-steam",
+        subgroup="fluid",
+        default_temperature=100,
+        max_temperature=400,
+        base_color={0.5, 0.5, 0.7},
+        flow_color={0.5, 0.5, 0.6},
+        icons={
+            {
+                icon = "__base__/graphics/icons/fluid/steam.png",
+                icon_size = 64,
+                tint = {r=0.5,g=0.5,b=0.7,a=1}
+            }
+        },
+    },
 }
