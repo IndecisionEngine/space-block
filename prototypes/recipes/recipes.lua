@@ -137,7 +137,7 @@ data:extend{
             {type="fluid", name="water", amount=50},
         },
         results = {
-            {type="fluid", name="steam", amount=500, temperature=165}
+            {type="fluid", name="steam", amount=500, temperature=225}
         },
         allow_productivity = false,
     },
@@ -155,5 +155,70 @@ data:extend{
             {type="fluid", name="water", amount=10}
         },
         allow_productivity = false
+    },
+    {
+        type = "recipe",
+        name = "energetic-heavy-oil-cracking",
+        categories = {"chemistry"},
+        auto_recycle = false,
+        enabled = true,
+        energy_required = 2,
+        ingredients = {
+            {type = "fluid", name = "steam", amount = 150},
+            {type = "fluid", name = "heavy-oil", amount = 40}
+        },
+        results = {
+            {type = "fluid", name = "light-oil", amount = 30}
+        },
+        allow_productivity = true,
+        icon = "__base__/graphics/icons/fluid/heavy-oil-cracking.png",
+        subgroup = "fluid-recipes",
+        -- order = "b[fluid-chemistry]-a[heavy-oil-cracking]",
+        crafting_machine_tint = {
+            primary = {r = 1.000, g = 0.642, b = 0.261, a = 1.000}, -- #ffa342ff
+            secondary = {r = 1.000, g = 0.722, b = 0.376, a = 1.000}, -- #ffb85fff
+            tertiary = {r = 0.854, g = 0.659, b = 0.576, a = 1.000}, -- #d9a892ff
+            quaternary = {r = 1.000, g = 0.494, b = 0.271, a = 1.000}, -- #ff7e45ff
+        }
+    },
+    {
+        type = "recipe",
+        name = "energetic-light-oil-cracking",
+        categories = {"chemistry"},
+        auto_recycle = false,
+        enabled = true,
+        energy_required = 2,
+        ingredients = {
+            {type = "fluid", name = "steam", amount = 150},
+            {type = "fluid", name = "light-oil", amount = 30}
+        },
+        results = {
+            {type = "fluid", name = "petroleum-gas", amount = 20}
+        },
+        allow_productivity = true,
+        icon = "__base__/graphics/icons/fluid/light-oil-cracking.png",
+        subgroup = "fluid-recipes",
+        order = "b[fluid-chemistry]-b[light-oil-cracking]",
+        crafting_machine_tint = {
+            primary = {r = 0.764, g = 0.596, b = 0.780, a = 1.000}, -- #c298c6ff
+            secondary = {r = 0.762, g = 0.551, b = 0.844, a = 1.000}, -- #c28cd7ff
+            tertiary = {r = 0.895, g = 0.773, b = 0.596, a = 1.000}, -- #e4c597ff
+            quaternary = {r = 1.000, g = 0.734, b = 0.290, a = 1.000}, -- #ffbb49ff
+        }
+    },
+    {
+        type = "recipe",
+        name="basic-solar-panel",
+        categories={"crafting"},
+        enabled=true,
+        energy_required=10,
+        crafting_speed=10,
+        ingredients={
+            {type="item", name="iron-plate", amount=5},
+            {type="item", name="electronic-circuit", amount=5},
+        },
+        results= {
+            { type= "item", name="basic-solar-panel", amount=1}
+        }
     },
 }

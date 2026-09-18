@@ -51,6 +51,19 @@ data:extend {
         subgroup = "energy",
         place_result = "hydrogen-accumulator",
         stack_size = 50
+    },
+    {
+        type = "item",
+        name = "basic-solar-panel",
+        icons={ 
+            {
+                icon="__base__/graphics/icons/solar-panel.png",
+                tint={r=0.8,g=0.8,b=.5,a=1}
+            }
+        },
+        subgroup = "energy",
+        place_result = "basic-solar-panel",
+        stack_size = 50
     }
 
 
