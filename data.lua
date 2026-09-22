@@ -4,7 +4,7 @@ require("prototypes/fluids/fluids")
 require("prototypes/entity/entity")
 require("prototypes/recipes/recipes")
 require("prototypes/recipes/recipe-overrides")
--- require("prototypes/technology/technology")
+require("prototypes/technology/technology")
 
 data:extend{
     {
@@ -16,3 +16,5 @@ data:extend{
         localised_name={"description.leave-hub"}
     }
 }
+
+

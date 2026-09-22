@@ -1,8 +1,4 @@
-
-
--- for _, tech in pairs(data.raw["technology"]) do
---     tech.hidden = true
--- end
+require("prototypes/technology/technology-updates")
 
 -- for _, recipe in pairs(data.raw["recipe"]) do
 --     recipe.hidden = true
@@ -14,6 +10,8 @@ local recipes_to_hide = {
     "burner-mining-drill",
     "burner-inserter",
     "small-electric-pole",
+    "offshore-pump",
+    "land-mine"
 }
 
 for _, recipe in pairs(recipes_to_hide) do
