@@ -26,7 +26,10 @@ data:extend {
             }
         },
         fuel_value="12MJ",
-        fuel_category="oxygen-rich",
+        fuel_categories={
+            "chemical", 
+            "oxygen-rich",
+        },
         subgroup="raw-material",
         stack_size=50,
         weight= 1.1 * kg,
@@ -64,7 +67,21 @@ data:extend {
         subgroup = "energy",
         place_result = "basic-solar-panel",
         stack_size = 50
-    }
+    },
+    {
+        type = "item",
+        name = "gravity-chest",
+        icons={ 
+            {
+                icon="__base__/graphics/icons/iron-chest.png",
+                tint={r=0.8,g=0.8,b=.5,a=1}
+            }
+        },
+        subgroup = "storage",
+        place_result = "gravity-chest",
+        stack_size = 50
+    },
+
 
 
 }

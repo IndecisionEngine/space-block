@@ -3,7 +3,7 @@ data:extend{
         type="recipe",
         name="basic-electronic-furnace",
         categories={"crafting"},
-        enabled=true,
+        enabled=false,
         energy_required=10,
         crafting_speed=10,
         ingredients={
@@ -19,7 +19,7 @@ data:extend{
         type="recipe",
         name="water-splitting",
         categories={"chemistry"},
-        enabled=true,
+        enabled=false,
         energy_required=4,
         ingredients={
             {type="fluid", name="water", amount=200}
@@ -37,7 +37,7 @@ data:extend{
         type="recipe",
         name="oxygen-rich-carbon",
         categories={"chemistry"},
-        enabled=true,
+        enabled=false,
         energy_required=4,
         ingredients={
             {type="item", name="carbon", amount=5},
@@ -60,7 +60,7 @@ data:extend{
         type="recipe",
         name="atmospheric-boiler",
         categories={"crafting"},
-        enabled=true,
+        enabled=false,
         energy_required=5,
         ingredients={
             {type="item", name="iron-plate", amount=10},
@@ -75,7 +75,7 @@ data:extend{
         type="recipe",
         name="hydrogen-venting",
         categories={"chemistry"},
-        enabled=true,
+        enabled=false,
         energy_required=1,
         ingredients={
             {type="fluid", name="h2", amount=200}
@@ -95,7 +95,7 @@ data:extend{
         type="recipe",
         name="oxygen-venting",
         categories={"chemistry"},
-        enabled=true,
+        enabled=false,
         energy_required=1,
         ingredients={
             {type="fluid", name="o2", amount=200}
@@ -115,7 +115,7 @@ data:extend{
         type = "recipe",
         name = "hydrogen-accumulator",
         categories = {"chemistry"},
-        enabled = true,
+        enabled = false,
         energy_required = 10,
         ingredients = {
             {type="item", name="iron-plate", amount=5},
@@ -130,7 +130,7 @@ data:extend{
         type = "recipe",
         name = "hydrogen-ignition",
         categories = {"chemistry"},
-        enabled = true,
+        enabled = false,
         energy_required = 2,
         ingredients = {
             {type="fluid", name="h2", amount=50},
@@ -146,7 +146,7 @@ data:extend{
         name = "exhaust-steam-condensation",
         categories = {"chemistry", "cryogenics"},
         subgroup = "fluid-recipes",
-        enabled = true,
+        enabled = false,
         energy_required = 1,
         ingredients = {
             {type="fluid", name="exhaust-steam", amount=100},
@@ -161,7 +161,7 @@ data:extend{
         name = "energetic-heavy-oil-cracking",
         categories = {"chemistry"},
         auto_recycle = false,
-        enabled = true,
+        enabled = false,
         energy_required = 2,
         ingredients = {
             {type = "fluid", name = "steam", amount = 150},
@@ -186,7 +186,7 @@ data:extend{
         name = "energetic-light-oil-cracking",
         categories = {"chemistry"},
         auto_recycle = false,
-        enabled = true,
+        enabled = false,
         energy_required = 2,
         ingredients = {
             {type = "fluid", name = "steam", amount = 150},
@@ -210,7 +210,7 @@ data:extend{
         type = "recipe",
         name="basic-solar-panel",
         categories={"crafting"},
-        enabled=true,
+        enabled=false,
         energy_required=10,
         crafting_speed=10,
         ingredients={
@@ -219,6 +219,21 @@ data:extend{
         },
         results= {
             { type= "item", name="basic-solar-panel", amount=1}
+        }
+    },
+    {
+        type="recipe",
+        name="gravity-chest",
+        categories={"crafting"},
+        enabled=false,
+        energy_required=1,
+        crafting_speed=1,
+        ingredients={
+            {type="item", name="iron-plate", amount=6},
+            {type="item", name="stone-brick", amount=3},
+        },
+        results= {
+            { type= "item", name="gravity-chest", amount=1}
         }
     },
 }

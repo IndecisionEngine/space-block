@@ -24,6 +24,13 @@ local recipe_mods ={
     },
     ["metallic-asteroid-crushing"]          = {
         results = {
+            {type="item", name="iron-ore",                amount_min = 3, amount_max = 9},
+            {type="item", name="copper-ore",              amount_min = 3, amount_max = 9},
+            {type="item", name="metallic-asteroid-chunk", amount=1, independent_probability=0.3, ignored_by_stats=1}
+        }
+    },
+    ["advanced-metallic-asteroid-crushing"]          = {
+        results = {
             {type="item", name="iron-ore",                amount=20},
             {type="item", name="stone",                   amount=5},
             {type="item", name="metallic-asteroid-chunk", amount=1, independent_probability=0.3, ignored_by_stats=1}
@@ -36,24 +43,24 @@ local recipe_mods ={
             {type="item", name="carbonic-asteroid-chunk", amount=1, independent_probability=0.3, ignored_by_stats=1}
         }
     },
-    ["oxide-asteroid-crushing"]          = {
+    ["oxide-asteroid-crushing"]             = {
         results = {
             {type="item", name="ice",                  amount=5},
             {type="item", name="stone",                amount=5},
             {type="item", name="oxide-asteroid-chunk", amount=1, independent_probability=0.45, ignored_by_stats=1}
         }
     },
-    ["storage-tank"]                    = {
+    ["storage-tank"]                        = {
         ingredients = {
             {type="item", name="iron-plate", amount=25}
         }
     },
-    ["medium-electric-pole"]            = {
+    ["medium-electric-pole"]                = {
         ingredients = {
             {type="item", name="iron-stick", amount=4},
             {type="item", name="copper-cable", amount=2},
         }
-    }
+    },
 }
 
 for recipe_name, mod in pairs(recipe_mods) do
