@@ -8,7 +8,6 @@ script.on_init(function()
         remote.call("freeplay","set_skip_intro",true)
         remote.call("freeplay","set_disable_crashsite",true)
     end
-    
 end)
 
 local function return_to_platform(player)
@@ -45,21 +44,32 @@ script.on_event(defines.events.on_player_created, function(event)
 
     if platform then
         storage.hub = platform.apply_starter_pack()
-        storage.hub.insert({ name = "crusher", count = 10 })
-        storage.hub.insert({ name = "asteroid-collector", count = 10 })
-        storage.hub.insert({ name = "solar-panel", count = 3 })
-        storage.hub.insert({ name = "inserter", count = 10})
-        storage.hub.insert({ name = "iron-plate", count = 25})
-        storage.hub.insert({ name = "electronic-circuit", count = 15})
-        storage.hub.insert({ name = "space-platform-foundation", count = 350})
-        storage.hub.insert({ name = "basic-electronic-furnace", count = 10})
-        storage.hub.insert({ name = "chemical-plant", count = 10})
-        storage.hub.insert({ name = "atmospheric-boiler", count = 10})
-        storage.hub.insert({ name = "steam-engine", count = 10})
-        storage.hub.insert({ name = "medium-electric-pole", count = 10})
+
+        if settings.startup["space-block-extra-starting-items"].value == true then
+            storage.hub.insert({ name = "crusher", count = 10 })
+            storage.hub.insert({ name = "asteroid-collector", count = 10 })
+            storage.hub.insert({ name = "solar-panel", count = 3 })
+            storage.hub.insert({ name = "inserter", count = 10})
+            storage.hub.insert({ name = "iron-plate", count = 25})
+            storage.hub.insert({ name = "electronic-circuit", count = 15})
+            storage.hub.insert({ name = "space-platform-foundation", count = 350})
+            storage.hub.insert({ name = "basic-electronic-furnace", count = 10})
+            storage.hub.insert({ name = "chemical-plant", count = 10})
+            storage.hub.insert({ name = "atmospheric-boiler", count = 10})
+            storage.hub.insert({ name = "steam-engine", count = 10})
+            storage.hub.insert({ name = "medium-electric-pole", count = 10})
+        else
+            storage.hub.insert({ name = "crusher", count = 1 })
+            storage.hub.insert({ name = "asteroid-collector", count = 1 })
+            storage.hub.insert({ name = "space-platform-foundation", count = 100})
+            storage.hub.insert({ name = "basic-electronic-furnace", count = 1})
+            storage.hub.insert({ name = "medium-electric-pole", count = 3})
+            storage.hub.insert({ name = "basic-solar-panel", count = 5 })
+        end
 
         return_to_platform(player)
     end
+    game.take_technology_screenshot{player=player}
 end)
 
 
@@ -132,3 +142,11 @@ script.on_event(defines.events.on_tick, function(event)
         end
     end
 end)
+
+
+
+
+-- local group = game.permissions.get_group("Default")
+-- group.set_allows_action(defines.input_action.land_at_planet, false)
+-- /c game.player.print(serpent.block(defines.input_action))
+-- helpers.write_file("input-action.json", helpers.table_to_json(defines.input_action))

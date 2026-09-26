@@ -57,7 +57,7 @@ local recipe_mods ={
     },
     ["medium-electric-pole"]                = {
         ingredients = {
-            {type="item", name="iron-stick", amount=4},
+            {type="item", name="iron-plate", amount=3},
             {type="item", name="copper-cable", amount=2},
         }
     },

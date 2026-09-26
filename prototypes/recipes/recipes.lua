@@ -65,7 +65,7 @@ data:extend{
         ingredients={
             {type="item", name="iron-plate", amount=10},
             {type="item", name="pipe", amount=4},
-            {type="item", name="stone-furnace", amount=1},
+            {type="item", name="stone-brick", amount=5},
         },
         results={
             {type="item", name="atmospheric-boiler", amount=1}

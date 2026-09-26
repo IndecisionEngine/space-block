@@ -1,24 +1,10 @@
 
 local starting_recipes={
     "metallic-asteroid-crushing",
-    "carbonic-asteroid-crushing",
-    "oxide-asteroid-crushing",
-    "advanced-metallic-asteroid-crushing",
-    "advanced-carbonic-asteroid-crushing",
-    "advanced-oxide-asteroid-crushing",
-    "solar-panel",
-    "crusher",
-    "asteroid-collector",
-    "ice-melting",
-    "pipe",
-    "underground-pipe",
-    "storage-tank",
-    "inserter",
+    -- "advanced-metallic-asteroid-crushing",
+    -- "advanced-carbonic-asteroid-crushing",
+    -- "advanced-oxide-asteroid-crushing",
     "space-platform-foundation",
-    "simple-coal-liquefaction",
-    "medium-electric-pole",
-    "power-switch",
-    "space-science"
 }
 for _, recipename in pairs(starting_recipes) do
     if data.raw.recipe[recipename] then
@@ -26,13 +12,7 @@ for _, recipename in pairs(starting_recipes) do
     end
 end
 
-data.raw["assembling-machine"]["oil-refinery"].surface_conditions={
-    {
-        property="gravity",
-        min=0,
-        max=100
-    }
-}
+data.raw["assembling-machine"]["oil-refinery"].surface_conditions={}
 
 if data.raw["planet"] and data.raw["planet"].nauvis then
     local asteroid_util = require("__space-age__.prototypes.planet.asteroid-spawn-definitions")

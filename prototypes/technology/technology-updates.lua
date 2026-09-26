@@ -25,6 +25,10 @@ data:extend{
                 type = "unlock-recipe",
                 recipe = "lab"
             },
+            {
+                type = "unlock-recipe",
+                recipe = "power-switch"
+            },
         },
         research_trigger = {
             type = "craft-item",

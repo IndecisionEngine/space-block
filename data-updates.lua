@@ -7,11 +7,15 @@ require("prototypes/technology/technology-updates")
 
 local recipes_to_hide = {
     "boiler",
+    "stone-furnace",
     "burner-mining-drill",
     "burner-inserter",
     "small-electric-pole",
     "offshore-pump",
-    "land-mine"
+    "land-mine",
+    "wooden-chest",
+    "iron-chest",
+    "steel-chest"
 }
 
 for _, recipe in pairs(recipes_to_hide) do
