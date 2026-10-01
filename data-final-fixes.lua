@@ -72,3 +72,14 @@ solar.picture.layers[1].tint = {
     a = 1,
 }
 data:extend{solar}
+
+local thruster = table.deepcopy(data.raw["thruster"]["thruster"])
+thruster.name = "basic-thruster"
+thruster.min_performance = {
+    fluid_volume = 0.1, fluid_usage = 0.1, effectivity = 0.65
+}
+thruster.max_performance = {
+    fluid_volume = 0.7, fluid_usage = 3, effectivity = 0.12
+}
+thruster.minable.result = "basic-thruster"
+data:extend{thruster}

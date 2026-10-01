@@ -2,11 +2,10 @@
 local recipe_mods ={
     ["space-platform-foundation"]           = {
         ingredients = {
-            {type="item", name="iron-plate",    amount=5},
+            {type="item", name="iron-plate",    amount=6},
             {type="item", name="copper-cable",   amount=3},
-            {type="item", name="carbon",        amount=2},
         },
-        results = { {type="item", name="space-platform-foundation", amount=1} },
+        results = { {type="item", name="space-platform-foundation", amount=2} },
         energy_required=2
     },
     ["crusher"]                             = {
@@ -61,6 +60,41 @@ local recipe_mods ={
             {type="item", name="copper-cable", amount=2},
         }
     },
+    ["steam-engine"]                        = {
+        ingredients = {
+            {type="item", name="engine-unit", amount=3},
+            {type="item", name="steel-plate", amount=6},
+            {type="item", name="copper-cable", amount=12},
+        }
+    },
+    ["military-science-pack"]                        = {
+        ingredients = {
+            {type="item", name="repair-pack", amount=5},
+            {type="item", name="gun-turret", amount=1},
+            {type="item", name="stone-wall", amount=10},
+        },
+        results = {
+            {type="item", name="military-science-pack", amount=3},
+        }
+    },
+    ["solar-panel"]                        = {
+        ingredients = {
+            {type="item", name="steel-plate", amount=5},
+            {type="item", name="advanced-circuit", amount=4},
+            {type="item", name="copper-plate", amount=5},
+        }
+    },
+    ["space-science-pack"]                        = {
+        ingredients = {
+            {type="fluid", name="thruster-fuel", amount=300},
+            {type="fluid", name="sulfuric-acid", amount=600},
+            {type="item", name="calcite", amount=4},
+        },
+        results = {
+            {type="item", name="space-science-pack", amount=3},
+        },
+        categories = {"chemistry", "cryogenics"},
+    },
 }
 
 for recipe_name, mod in pairs(recipe_mods) do
@@ -69,5 +103,6 @@ for recipe_name, mod in pairs(recipe_mods) do
         if mod.ingredients then recipe.ingredients = mod.ingredients end
         if mod.results then recipe.results = mod.results end
         if mod.energy_required then recipe.energy_required = mod.energy_required end
+        if mod.categories then recipe.categories = mod.categories end
     end
 end

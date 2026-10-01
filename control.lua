@@ -62,9 +62,9 @@ script.on_event(defines.events.on_player_created, function(event)
             storage.hub.insert({ name = "crusher", count = 1 })
             storage.hub.insert({ name = "asteroid-collector", count = 1 })
             storage.hub.insert({ name = "space-platform-foundation", count = 100})
-            storage.hub.insert({ name = "basic-electronic-furnace", count = 1})
+            storage.hub.insert({ name = "basic-electronic-furnace", count = 2})
             storage.hub.insert({ name = "medium-electric-pole", count = 3})
-            storage.hub.insert({ name = "basic-solar-panel", count = 5 })
+            storage.hub.insert({ name = "solar-panel", count = 4})
         end
 
         return_to_platform(player)

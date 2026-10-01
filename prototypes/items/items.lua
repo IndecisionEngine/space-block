@@ -81,6 +81,19 @@ data:extend {
         place_result = "gravity-chest",
         stack_size = 50
     },
+    {
+        type = "item",
+        name = "basic-thruster",
+        icons={ 
+            {
+                icon="__space-age__/graphics/icons/thruster.png",
+                tint={r=0.8,g=0.8,b=.5,a=1}
+            }
+        },
+        subgroup = "space-platform",
+        place_result = "basic-thruster",
+        stack_size = 50
+    },
 
 
 

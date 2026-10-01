@@ -1,6 +1,7 @@
 
 for _, tech in pairs(data.raw["technology"]) do
     tech.hidden = true
+    tech.enabled = false
 end
 
 local techs_to_show = {

@@ -8,7 +8,6 @@ data:extend{
         crafting_speed=10,
         ingredients={
             {type="item", name="electronic-circuit", amount=5},
-            {type="item", name="stone-brick", amount=5},
             {type="item", name="iron-plate", amount=5},
         },
         results= {
@@ -149,10 +148,10 @@ data:extend{
         enabled = false,
         energy_required = 1,
         ingredients = {
-            {type="fluid", name="exhaust-steam", amount=100},
+            {type="fluid", name="exhaust-steam", amount=1000},
         },
         results = {
-            {type="fluid", name="water", amount=10}
+            {type="fluid", name="water", amount=100}
         },
         allow_productivity = false
     },
@@ -234,6 +233,51 @@ data:extend{
         },
         results= {
             { type= "item", name="gravity-chest", amount=1}
+        }
+    },
+    {
+        type="recipe",
+        name="basic-thruster",
+        -- categories={"rocket-crafting"},
+        enabled=false,
+        energy_required=1,
+        crafting_speed=1,
+        ingredients={
+            {type="item", name="steel-plate", amount=6},
+            {type="item", name="engine-unit", amount=3},
+            {type="item", name="advanced-circuit", amount=3},
+        },
+        results= {
+            { type= "item", name="basic-thruster", amount=1}
+        }
+    },
+    {
+        type="recipe",
+        name="simple-heavy-oil-cracking",
+        auto_recycle = false,
+        categories={"chemistry"},
+        enabled=false,
+        energy_required=2,
+        ingredients={
+            {type="fluid", name="water", amount=100},
+            {type="fluid", name="heavy-oil", amount=50},
+        },
+        results= {
+            { type= "fluid", name="petroleum-gas", amount=15}
+        }
+    },
+    {
+        type="recipe",
+        name="pistol",
+        auto_recycle = false,
+        categories={"crafting"},
+        enabled=false,
+        energy_required=2,
+        ingredients={
+            {type="item", name="iron-plate", amount=10},
+        },
+        results= {
+            { type= "item", name="pistol", amount=1}
         }
     },
 }
