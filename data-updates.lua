@@ -15,7 +15,9 @@ local recipes_to_hide = {
     "land-mine",
     "wooden-chest",
     "iron-chest",
-    "steel-chest"
+    "steel-chest",
+    "firearm-magazine",
+    "light-armor"
 }
 
 for _, recipe in pairs(recipes_to_hide) do

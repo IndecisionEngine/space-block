@@ -274,10 +274,26 @@ data:extend{
         enabled=false,
         energy_required=2,
         ingredients={
-            {type="item", name="iron-plate", amount=10},
+            {type="item", name="iron-plate", amount=6},
+            {type="item", name="iron-gear-wheel", amount=2},
         },
         results= {
             { type= "item", name="pistol", amount=1}
+        }
+    },
+    {
+        type="recipe",
+        name="petroleum-synthesis",
+        auto_recycle = false,
+        categories={"chemistry"},
+        enabled=false,
+        energy_required=2,
+        ingredients={
+            {type="fluid", name="h2", amount=40},
+            {type="item", name="carbon", amount=2},
+        },
+        results= {
+            { type= "fluid", name="petroleum-gas", amount=30}
         }
     },
 }

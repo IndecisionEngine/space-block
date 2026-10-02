@@ -459,25 +459,17 @@ data:extend{
     },
     {
         type = "technology",
-        name = "sb-simple-coal-liquefaction",
-        icon = "__base__/graphics/technology/oil-processing.png",
-        icon_size = 256,
+        name = "sb-petroleum-synthesis",
+        icon = "__base__/graphics/icons/fluid/petroleum-gas.png",
+        icon_size = 64,
         effects = {
             {
                 type = "unlock-recipe",
-                recipe = "oil-refinery"
-            },
-            {
-                type = "unlock-recipe",
-                recipe = "simple-coal-liquefaction"
-            },
-            {
-                type = "unlock-recipe",
-                recipe = "simple-heavy-oil-cracking"
+                recipe = "petroleum-synthesis"
             },
         },
         prerequisites = {
-            "sb-coal-synthesis","sb-advanced-oxide-asteroid-crushing",
+            "sb-water-manipulation", "sb-asteroid-handling-2"
         },
         unit = {
             count = 25,
@@ -544,56 +536,33 @@ data:extend{
             time = 15
         }
     },
-    {
-        type = "technology",
-        name = "sb-coal-synthesis",
-        icon = "__space-age__/graphics/icons/coal-synthesis.png",
-        icon_size = 64,
-        effects = {
-            {
-                type = "unlock-recipe",
-                recipe = "coal-synthesis"
-            },
-            {
-                type = "unlock-recipe",
-                recipe = "advanced-carbonic-asteroid-crushing"
-            }
-        },
-        prerequisites = {
-            "sb-water-manipulation",
-        },
-        unit = {
-            count = 25,
-            ingredients = {
-                {"automation-science-pack", 1},
-                {"logistic-science-pack", 1},
-            },
-            time = 10
-        }
-    },
-    {
-        type = "technology",
-        name = "sb-sulfur-processing",
-        icon = "__base__/graphics/technology/sulfur-processing.png",
-        icon_size = 256,
-        effects = {
-            {
-                type = "unlock-recipe",
-                recipe = "sulfuric-acid"
-            },
-        },
-        unit = {
-            count = 25,
-            ingredients = {
-                {"automation-science-pack", 1},
-                {"logistic-science-pack", 1},
-            },
-            time = 10
-        },
-        prerequisites = {
-            "sb-coal-synthesis",
-        }
-    },
+    -- {
+    --     type = "technology",
+    --     name = "sb-coal-synthesis",
+    --     icon = "__space-age__/graphics/icons/coal-synthesis.png",
+    --     icon_size = 64,
+    --     effects = {
+    --         {
+    --             type = "unlock-recipe",
+    --             recipe = "coal-synthesis"
+    --         },
+    --         {
+    --             type = "unlock-recipe",
+    --             recipe = "advanced-carbonic-asteroid-crushing"
+    --         }
+    --     },
+    --     prerequisites = {
+    --         "sb-water-manipulation",
+    --     },
+    --     unit = {
+    --         count = 25,
+    --         ingredients = {
+    --             {"automation-science-pack", 1},
+    --             {"logistic-science-pack", 1},
+    --         },
+    --         time = 10
+    --     }
+    -- },
     {
         type = "technology",
         name = "sb-plastics",
@@ -606,7 +575,7 @@ data:extend{
             }
         },
         prerequisites = {
-            "sb-simple-coal-liquefaction",
+            "sb-petroleum-synthesis",
         },
         unit = {
             count = 25,
@@ -820,13 +789,13 @@ data:extend{
     },
     {
         type = "technology",
-        name = "sb-advanced-oxide-asteroid-crushing",
+        name = "sb-asteroid-handling-2",
         icon = "__space-age__/graphics/technology/asteroid-reprocessing.png",
         icon_size = 256,
         effects = {
             {
                 type = "unlock-recipe",
-                recipe = "advanced-oxide-asteroid-crushing"
+                recipe = "advanced-carbonic-asteroid-crushing"
             },
         },
         unit = {
@@ -852,6 +821,10 @@ data:extend{
             {
                 type = "unlock-recipe",
                 recipe = "firearm-magazine"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "light-armor"
             },
         },
         unit = {
@@ -943,11 +916,13 @@ data:extend{
                 {"automation-science-pack", 1},
                 {"logistic-science-pack", 1},
                 {"chemical-science-pack", 1},
+                {"military-science-pack", 1},
             },
             time = 10
         },
         prerequisites = {
             "sb-chemical-science-pack",
+            "sb-military-science-pack",
             "sb-water-manipulation",
         }
     },
@@ -976,6 +951,30 @@ data:extend{
     },
     {
         type = "technology",
+        name = "sb-sulfur-processing",
+        icon = "__base__/graphics/technology/sulfur-processing.png",
+        icon_size = 256,
+        effects = {
+            {
+                type = "unlock-recipe",
+                recipe = "sulfuric-acid"
+            },
+        },
+        unit = {
+            count = 25,
+            ingredients = {
+                {"automation-science-pack", 1},
+                {"logistic-science-pack", 1},
+                {"chemical-science-pack", 1},
+            },
+            time = 10
+        },
+        prerequisites = {
+            "sb-chemical-science-pack",
+        }
+    },
+    {
+        type = "technology",
         name = "sb-processing-unit",
         icon = "__base__/graphics/technology/processing-unit.png",
         icon_size = 256,
@@ -995,7 +994,7 @@ data:extend{
             },
             time = 10
         },
-        prerequisites = {"sb-sulfur-processing", "sb-chemical-science-pack"}
+        prerequisites = {"sb-sulfur-processing"}
     },
     {
         type = "technology",
@@ -1122,6 +1121,28 @@ data:extend{
             "sb-chemical-science-pack",
             "sb-basic-material-processing",
         }
+    },
+    {
+        type = "technology",
+        name = "sb-asteroid-handling-3",
+        icon = "__space-age__/graphics/technology/asteroid-reprocessing.png",
+        icon_size = 256,
+        effects = {
+            {
+                type = "unlock-recipe",
+                recipe = "advanced-oxide-asteroid-crushing"
+            },
+        },
+        unit = {
+            count = 25,
+            ingredients = {
+                {"automation-science-pack", 1},
+                {"logistic-science-pack", 1},
+                {"chemical-science-pack", 1},
+            },
+            time = 10
+        },
+        prerequisites = {"sb-asteroid-handling-2", "sb-chemical-science-pack"}
     },
     ----------------------------------------------------------------------------------------------------
     ---         MILITARY SCIENCE
@@ -1371,6 +1392,7 @@ data:extend{
         },
         prerequisites = {
             "sb-basic-thruster",
+            "sb-sulfur-processing",
         }
     },
     {

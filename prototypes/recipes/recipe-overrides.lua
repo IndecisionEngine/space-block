@@ -23,8 +23,8 @@ local recipe_mods ={
     },
     ["metallic-asteroid-crushing"]          = {
         results = {
-            {type="item", name="iron-ore",                amount_min = 3, amount_max = 9},
-            {type="item", name="copper-ore",              amount_min = 3, amount_max = 9},
+            {type="item", name="iron-ore",                amount_min = 5, amount_max = 22},
+            {type="item", name="copper-ore",              amount_min = 1, amount_max = 6},
             {type="item", name="metallic-asteroid-chunk", amount=1, independent_probability=0.3, ignored_by_stats=1}
         }
     },
@@ -94,6 +94,12 @@ local recipe_mods ={
             {type="item", name="space-science-pack", amount=3},
         },
         categories = {"chemistry", "cryogenics"},
+    },
+    ["plastic-bar"]                        = {
+        ingredients = {
+            {type="fluid", name="petroleum-gas", amount=20},
+            {type="item", name="sulfur", amount=1},
+        }
     },
 }
 
