@@ -1310,63 +1310,63 @@ data:extend{
     ----------------------------------------------------------------------------------------------------
     ---         PRODUCTION SCIENCE
     ----------------------------------------------------------------------------------------------------
-    {
-        type = "technology",
-        name = "sb-production-science-pack",
-        icon = "__base__/graphics/technology/production-science-pack.png",
-        icon_size = 256,
-        essential = true,
-        effects = {
-            {
-                type = "unlock-recipe",
-                recipe = "production-science-pack"
-            },
-        },
-        unit = {
-            count = 25,
-            ingredients = {
-                {"automation-science-pack", 1},
-                {"logistic-science-pack", 1},
-                {"chemical-science-pack", 1},
-            },
-            time = 10
-        },
-        prerequisites = {
-            "sb-automation-science-pack",
-            "sb-logistic-science-pack",
-            "sb-chemical-science-pack",
-        }
-    },
+    -- {
+    --     type = "technology",
+    --     name = "sb-production-science-pack",
+    --     icon = "__base__/graphics/technology/production-science-pack.png",
+    --     icon_size = 256,
+    --     essential = true,
+    --     effects = {
+    --         {
+    --             type = "unlock-recipe",
+    --             recipe = "production-science-pack"
+    --         },
+    --     },
+    --     unit = {
+    --         count = 25,
+    --         ingredients = {
+    --             {"automation-science-pack", 1},
+    --             {"logistic-science-pack", 1},
+    --             {"chemical-science-pack", 1},
+    --         },
+    --         time = 10
+    --     },
+    --     prerequisites = {
+    --         "sb-automation-science-pack",
+    --         "sb-logistic-science-pack",
+    --         "sb-chemical-science-pack",
+    --     }
+    -- },
     ----------------------------------------------------------------------------------------------------
     ---         UTILITY SCIENCE
     ----------------------------------------------------------------------------------------------------
-    {
-        type = "technology",
-        name = "sb-utility-science-pack",
-        icon = "__base__/graphics/technology/utility-science-pack.png",
-        icon_size = 256,
-        essential = true,
-        effects = {
-            {
-                type = "unlock-recipe",
-                recipe = "utility-science-pack"
-            },
-        },
-        unit = {
-            count = 25,
-            ingredients = {
-                {"automation-science-pack", 1},
-                {"logistic-science-pack", 1},
-                {"chemical-science-pack", 1},
-            },
-            time = 10
-        },
-        prerequisites = {
-            "sb-automation-science-pack",
-            "sb-logistic-science-pack",
-            "sb-chemical-science-pack",
-        }
-    },
+    -- {
+    --     type = "technology",
+    --     name = "sb-utility-science-pack",
+    --     icon = "__base__/graphics/technology/utility-science-pack.png",
+    --     icon_size = 256,
+    --     essential = true,
+    --     effects = {
+    --         {
+    --             type = "unlock-recipe",
+    --             recipe = "utility-science-pack"
+    --         },
+    --     },
+    --     unit = {
+    --         count = 25,
+    --         ingredients = {
+    --             {"automation-science-pack", 1},
+    --             {"logistic-science-pack", 1},
+    --             {"chemical-science-pack", 1},
+    --         },
+    --         time = 10
+    --     },
+    --     prerequisites = {
+    --         "sb-automation-science-pack",
+    --         "sb-logistic-science-pack",
+    --         "sb-chemical-science-pack",
+    --     }
+    -- },
     ----------------------------------------------------------------------------------------------------
     ---         SPACE SCIENCE
     ----------------------------------------------------------------------------------------------------
@@ -1474,6 +1474,60 @@ data:extend{
         },
         prerequisites = {
             "sb-space-science-pack",
+        }
+    },
+    {
+        type = "technology",
+        name = "sb-planet-discovery-aquilo",
+        icon = "__space-age__/graphics/technology/aquilo.png",
+        icon_size = 256,
+        essential = true,
+        effects = {
+            {
+                type = "unlock-space-location",
+                space_location = "aquilo",
+                use_icon_overlay_constant = true
+            },
+        },
+        unit = {
+            count = 25,
+            ingredients = {
+                {"automation-science-pack", 1},
+                {"logistic-science-pack", 1},
+                {"chemical-science-pack", 1},
+                {"space-science-pack", 1},
+            },
+            time = 10
+        },
+        prerequisites = {
+            "sb-planet-discovery-vulcanus", "sb-planet-discovery-fulgora", "sb-planet-discovery-gleba",
+        }
+    },
+    {
+        type = "technology",
+        name = "sb-stellar-discovery-solar-system-edge",
+        icon = "__space-age__/graphics/technology/solar-system-edge.png",
+        icon_size = 256,
+        essential = true,
+        effects = {
+            {
+                type = "unlock-space-location",
+                space_location = "solar-system-edge",
+                use_icon_overlay_constant = true
+            },
+        },
+        unit = {
+            count = 25,
+            ingredients = {
+                {"automation-science-pack", 1},
+                {"logistic-science-pack", 1},
+                {"chemical-science-pack", 1},
+                {"space-science-pack", 1},
+            },
+            time = 10
+        },
+        prerequisites = {
+            "sb-planet-discovery-aquilo",
         }
     },
     ----------------------------------------------------------------------------------------------------

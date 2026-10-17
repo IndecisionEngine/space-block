@@ -76,10 +76,10 @@ data:extend{solar}
 local thruster = table.deepcopy(data.raw["thruster"]["thruster"])
 thruster.name = "basic-thruster"
 thruster.min_performance = {
-    fluid_volume = 0.1, fluid_usage = 0.1, effectivity = 0.65
+    fluid_volume = 0.1, fluid_usage = 0.1, effectivity = 0.60
 }
 thruster.max_performance = {
-    fluid_volume = 0.7, fluid_usage = 3, effectivity = 0.12
+    fluid_volume = 0.9, fluid_usage = 2.5, effectivity = 0.16
 }
 thruster.minable.result = "basic-thruster"
 data:extend{thruster}
