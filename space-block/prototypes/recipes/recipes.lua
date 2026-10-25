@@ -1,7 +1,7 @@
 data:extend{
     {
         type="recipe",
-        name="basic-electronic-furnace",
+        name="basic-electric-furnace",
         categories={"crafting"},
         enabled=false,
         energy_required=10,
@@ -11,7 +11,7 @@ data:extend{
             {type="item", name="iron-plate", amount=5},
         },
         results= {
-            { type= "item", name="basic-electronic-furnace", amount=1}
+            { type= "item", name="basic-electric-furnace", amount=1}
         }
     },
     {

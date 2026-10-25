@@ -121,7 +121,7 @@ data:extend{
         effects = {
             {
                 type = "unlock-recipe",
-                recipe = "basic-electronic-furnace"
+                recipe = "basic-electric-furnace"
             },
         },
         unit = {
