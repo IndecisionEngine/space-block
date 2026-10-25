@@ -5,7 +5,7 @@
       "type": "factorio",
       "request": "launch",
       "name": "Factorio Mod Debug",
-      "preLaunchTask": "sync-mod",
+      "preLaunchTask": "sync-mod"
     }
   ]
 }

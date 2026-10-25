@@ -6,8 +6,16 @@
       "type": "shell",
       "presentation": { "reveal": "silent" },
       "windows": {
+        "command": "robocopy \"${workspaceFolder}\\space-block\" \"${workspaceFolder}\\.test\\space-block\" /MIR /NFL /NDL /NJH /NJS; if ($LASTEXITCODE -lt 8) { exit 0 } else { exit $LASTEXITCODE }"
+      }
+    },
+    {
+      "label": "sync-mod-to-factorio",
+      "type": "shell",
+      "presentation": { "reveal": "silent" },
+      "windows": {
         "command": "robocopy \"${workspaceFolder}\\space-block\" \"$env:APPDATA\\Factorio\\mods\\space-block\" /MIR /NFL /NDL /NJH /NJS; if ($LASTEXITCODE -lt 8) { exit 0 } else { exit $LASTEXITCODE }"
       }
-    }
+    },
   ]
 }
